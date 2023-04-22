@@ -1,0 +1,938 @@
+/* ------------------------------------ Main --------------------------------------- */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+html body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    color: #ffffff;
+    background-color: #577399;
+}
+
+.container {
+    padding: 0px;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+}
+
+.header-text {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 100px;
+}
+
+.no-style {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* ------------------------------------ Home Nav --------------------------------------- */
+
+
+.home-nav {
+    position: fixed;
+    left: 75px;
+    top: 25px;
+    transform: translate(-50%, 50%);    
+    z-index: 1;
+}
+
+.home-icon {
+    transition: .3s;
+}
+
+.home-icon:hover {
+    transform: scale(1.2) translate(10px, 0px);
+    transition: .3s;
+}
+
+.icon {
+    width: 40px;
+    height: auto;
+}
+
+
+/* ------------------------------------ Social Nav --------------------------------------- */
+
+
+.social-menu ul {
+    position: fixed;
+    top: 50%;
+    right: 75px;
+    padding: 0;
+    margin: 0;
+    transform: translate(50%, -50%);
+    z-index: 1; 
+}
+
+.social-menu ul li {
+    list-style: none;
+    margin: 15 0px;
+}
+
+.social-menu ul li .fa {
+    font-size: 15px;
+    line-height: 30px;
+    transition: .3s;
+    color: #F7F7FF;
+}
+
+.social-menu ul li .fa:hover {
+
+}
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    transition: .3s;
+    border: 2px solid #F7F7FF;
+}
+
+.social-menu ul li a:hover {
+    transform: translate(-10px, 0px);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #e4405f;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #0077B5;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #131418;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #ea4c89;
+}
+
+
+/* ------------------------------------ Landing --------------------------------------- */
+
+
+.landing { 
+    background-color: #546D8D;
+    color: #f7f7ff;
+    height: 100%;
+    background: linear-gradient(-45deg, #506680, #546D8D, #718CAE, #546D8D, #506680);
+	background-size: 400% 300%;
+	animation: gradient 15s ease infinite;
+    overflow: hidden;    
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.landing .container {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#name {
+    font-size: 80px;
+    font-weight: 800;
+    margin-top: -5px;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+
+/* ------------------------------------ Divider 1 --------------------------------------- */
+
+
+.divider-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider-1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.divider-1 .shape-fill {
+    fill: #A4BDD6;
+}
+
+
+/* ------------------------------------ Recent Work --------------------------------------- */
+
+
+.work { 
+    background-color: #A4BDD6;
+    color: #F7F7FF;
+    height: 1000px;
+    overflow: hidden;    
+}
+
+.work .container {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper{
+    width: 1800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2vmin;
+    grid-auto-flow: dense;
+    text-align: center;
+}
+
+.item {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.item img {
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px 1.5px rgba(0, 0, 0, 0.05);
+}
+
+.featured {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item.optional.twelve {
+    display: none;
+}
+
+/* ------------------------------------ Divider 2 --------------------------------------- */
+
+
+.divider-2 {
+    background-color: #A4BDD6;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.divider-2 .shape-fill {
+    fill: #546e8f;
+}
+
+
+/* ------------------------------------ Services --------------------------------------- */
+
+
+.services { 
+    background-color: #546e8f;
+    color: #f7f7ff;
+    height: 1100px;
+    overflow: hidden;
+}
+
+.services .container {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-container {
+    width: 100%;  
+}
+
+.cards {
+    margin: auto;
+}
+
+.card {
+    width: 375px;
+    height: auto;
+    display: inline-block;    
+    background-color: #f7f7ff;
+    border-radius: 5px;
+    background-blend-mode: multiply;
+    box-shadow: 7px 7px 22.5px 2.5px rgba(0, 0, 0, 0.3);  
+}
+
+.card.one {
+    margin-right: 50px;
+    padding-bottom: 25px;
+}
+
+.card.two {
+    margin-right: 50px;
+    margin-left: 25px;
+    padding-bottom: 25px;    
+}
+
+.card.three {
+    margin-left: 25px;
+    padding-bottom: 25px;    
+}
+
+.service-icon {
+    margin-bottom: 5px;
+}
+
+img.service-icon {
+    width: 150px;
+    margin-top: 50px;
+}
+
+.service-type {
+    font-size: 24px;
+    font-weight: 800;
+    color: #546d8d;
+    margin-bottom: 0;
+    
+}
+
+.service-description {
+    padding: 25px;
+    color: #546d8d;
+    margin-top: 0;
+}
+
+.service-cta {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border: 3px solid #536a88;
+    color: #536a88;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.cta-sym {
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.service-cta:hover {
+    background-color: #536a88;
+    color: #f7f7ff;
+    transition: 0.2s;
+}
+
+
+/* ------------------------------------ Divider 3 --------------------------------------- */
+
+
+.divider-3 {
+    background-color: #546e8f;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.divider-3 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.divider-3 .shape-fill {
+    fill: #A4BDD6;
+}
+
+
+/* ------------------------------------ Copyright --------------------------------------- */
+
+
+.copyright { 
+    background-color: #A4BDD6;
+    color: #f7f7ff;
+}
+
+.copyright .container {
+    padding: 25px;
+    text-align: center;
+}
+
+#copyrightFont {
+    font-size: 10px;
+}
+
+
+/* ------------------------------------ Mob Social Nav --------------------------------------- */
+
+
+.mob-social-menu ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    display: none;
+}
+
+.mob-social-menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.mob-social-menu ul li .fa {
+    font-size: 15px;
+    line-height: 30px;
+    transition: .3s;
+    color: #F7F7FF;
+}
+
+.mob-social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    transition: .3s;
+    border: 2px solid #F7F7FF;
+}
+
+
+/* ------------------------------------ Media Queries --------------------------------------- */
+
+
+@media (max-width: 568px) {
+    
+    .home-nav {
+        display: none;
+    }    
+    
+    .social-menu ul {
+        display: none;
+    }
+    
+    .mob-social-menu ul {
+        display: block;
+    }
+    
+    
+    
+    
+    .header-text {
+        font-size: 30px;
+        margin-bottom: 75px;
+    }
+    
+    #name {
+        font-size: 40px;
+    }
+
+    #title {
+        font-size: 16px;
+    }
+    
+    
+    .work { 
+        height: 1500px;  
+    }
+
+    .wrapper{
+        width: 300px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .item.featured {
+        grid-column-start: span 4;
+        grid-row-start: span 2;
+    }    
+    
+    .item {
+        grid-column-start: span 2;
+        grid-row-start: span 1;
+    }
+    
+
+
+    
+    
+    
+    .services { 
+        height: 1900px;
+    }    
+    
+    .card {
+        width: 300px;
+    }
+
+    .card.one {
+        margin-right: 0px;
+        padding-bottom: 40px;
+        margin-bottom: 25px
+    }
+
+    .card.two {
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-bottom: 40px;   
+        margin-bottom: 25px
+    }
+
+    .card.three {
+        margin-left: 0px;
+        padding-bottom: 40px;    
+    }
+
+    .service-icon {
+        margin-bottom: 5px;
+    }
+
+    img.service-icon {
+        width: 125px;
+        margin-top: 50px;
+    }
+
+    .service-type {
+        font-size: 26px;
+    }
+
+    .service-description {
+        padding: 25px;
+        font-size: 16px;
+    }
+
+    .service-cta {
+        margin-bottom: 0px;
+    }
+
+    .cta-sym {
+        font-size: 22px;
+    }
+    
+    
+
+    form {
+        width: 300px;  
+    }
+
+    button.submit {
+        font-size: 20px;
+        width: 175px;
+        height: 45px;
+    }
+
+    .form-box-submit {
+        display: inline-block;
+        float: right;
+    }
+
+    .form-box-small {
+        width: 300px;
+        height: 50px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .form-box-big {
+        width: 300px;
+        height: 180px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;    
+        padding-top: 10px;
+    }
+
+    .form-box-2col.left {
+        margin-right: 0px;
+    }
+
+    .form-box-2col.right {
+        margin-left: 0px;
+    }
+
+}
+
+
+
+@media (min-width: 569px) and (max-width: 768px) {
+
+    
+    .home-nav {
+        display: none;
+    }    
+    
+    .social-menu ul {
+        display: none;
+    }
+    
+    .mob-social-menu ul {
+        display: block;
+    }    
+    
+    
+    
+    
+    #name {
+        font-size: 60px;
+    }
+
+    #title {
+        font-size: 20px;
+    }    
+    
+    .work { 
+        height: 1350px;   
+    }    
+    
+    .wrapper {
+        width: 500px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    
+    .featured {
+        grid-column-start: span 3;
+        grid-row-start: span 3;
+    }        
+
+    .item.optional.eleven {
+        display: none;
+    }     
+    
+    .item.optional.twelve {
+        display: none;
+    } 
+    
+
+    
+    .services { 
+        height: 2000px;
+    }    
+    
+    .card {
+        width: 500px;
+    }
+
+    .card.one {
+        margin-right: 0px;
+        padding-bottom: 50px;
+        margin-bottom: 25px
+    }
+
+    .card.two {
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-bottom: 50px;   
+        margin-bottom: 25px
+    }
+
+    .card.three {
+        margin-left: 0px;
+        padding-bottom: 50px;    
+    }
+
+    .service-icon {
+        margin-bottom: 5px;
+    }
+
+    img.service-icon {
+        width: 125px;
+        margin-top: 50px;
+    }
+
+    .service-type {
+        font-size: 26px;
+    }
+
+    .service-description {
+        padding: 25px;
+        font-size: 18px;
+    }
+
+    .service-cta {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        width: 40%;
+    }
+
+    .cta-sym {
+        font-size: 22px;
+    }
+    
+    
+
+    form {
+        width: 500px;  
+    }
+
+    button.submit {
+        font-size: 20px;
+        width: 175px;
+        height: 45px;
+    }
+
+    .form-box-submit {
+        display: inline-block;
+        float: right;
+    }
+
+    .form-box-small {
+        width: 500px;
+        height: 50px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .form-box-big {
+        width: 500px;
+        height: 240px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;    
+        padding-top: 10px;
+    }
+
+    .form-box-2col.left {
+        margin-right: 0px;
+    }
+
+    .form-box-2col.right {
+        margin-left: 0px;
+    }
+    
+    
+        
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    
+    
+    .home-nav {
+        display: none;
+    }    
+    
+    .social-menu ul {
+        display: none;
+    }
+    
+    .mob-social-menu ul {
+        display: block;
+    }    
+    
+    
+    
+    #name {
+        font-size: 70px;
+    }
+
+    #title {
+        font-size: 24px;
+    }    
+    
+    
+    
+    .wrapper {
+        width: 700px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .item.optional.twelve {
+        display: block;
+    } 
+    
+    
+    
+    .card {
+        width: 225px;
+    }
+
+    .card.one {
+        margin-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    .card.two {
+        margin-right: 5px;
+        margin-left: 5px;
+        padding-bottom: 10px;    
+    }
+
+    .card.three {
+        margin-left: 5px;
+        padding-bottom: 10px;    
+    }
+
+    .service-icon {
+        margin-bottom: 5px;
+    }
+
+    img.service-icon {
+        width: 100px;
+        margin-top: 25px;
+    }
+
+    .service-type {
+        font-size: 16px;
+    }
+
+    .service-description {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .service-cta {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font-size: 16px;
+        width: 70%;
+    }
+
+    .cta-sym {
+        font-size: 22px;
+    }
+    
+    
+
+    form {
+        width: 700px;  
+    }
+
+    button.submit {
+        font-size: 20px;
+        width: 175px;
+        height: 45px;
+    }
+
+    .form-box-submit {
+        display: inline-block;
+        float: right;
+    }
+
+    .form-box-small {
+        width: 322px;
+        height: 50px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .form-box-big {
+        width: 700px;
+        height: 240px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;    
+        padding-top: 10px;
+    }
+
+    .form-box-2col.left {
+        margin-right: 25px;
+    }
+
+    .form-box-2col.right {
+        margin-left: 25px;
+    }
+    
+    
+    
+}
+    
+
+
+@media (min-width: 1367px) and (max-width: 1921px) {
+
+    .wrapper {
+        width: 900px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .item.optional.twelve {
+        display: block;
+    }
+    
+    .card {
+        width: 350px;
+    }
+    
+    .card.one {
+        margin-right: 25px;
+    }
+
+    .card.two {
+        margin-right: 25px;
+        margin-left: 25px; 
+    }
+
+    img.service-icon {
+        width: 125px;
+    }    
+
+}
